@@ -46,6 +46,8 @@ services:
       service: federation
     pull_policy: "build"
     container_name: "federation-api"
+    environment:
+      NB_FEDERATE_REMOTE_PUBLIC_NODES: false
     build:
       context: apps/federation-api
       dockerfile: Dockerfile
