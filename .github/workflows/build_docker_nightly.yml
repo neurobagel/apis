@@ -1,4 +1,4 @@
-name: build Docker nightly image
+name: Build Docker nightly image
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
   build:
     strategy:
       matrix:
-        app: [{image_name: api, path: node-api}, {image_name: federation_api, path: federation-api}]
+        app: [{image_name: api, path: ./apps/node-api}, {image_name: federation_api, path: ./apps/federation-api}]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
