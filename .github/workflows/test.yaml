@@ -17,7 +17,7 @@ jobs:
         submodules: recursive
 
     - name: Launch test graph
-      run: docker compose up -d 
+      run: docker compose --profile test up -d 
 
     # TODO: Check if this is necessary, since the Python dependencies setup also takes some time
     - name: Sleep to allow graph setup
