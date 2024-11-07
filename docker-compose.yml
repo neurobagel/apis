@@ -20,9 +20,11 @@ services:
   api:
     profiles:
       - "test"
+    image: "api:local"
     extends:
       file: recipes/docker-compose.yml
       service: api
+    pull_policy: "build"
     container_name: "node-api"
     environment:
       NB_GRAPH_USERNAME: "DBUSER"
@@ -38,9 +40,11 @@ services:
   federation:
     profiles:
       - "test"
+    image: "federation:local"
     extends:
       file: recipes/docker-compose.yml
       service: federation
+    pull_policy: "build"
     container_name: "federation-api"
     build:
       context: apps/federation-api
