@@ -50,7 +50,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ${{ matrix.app.path }}
-          file: ./Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           # Select a subset of labels to apply from https://github.com/opencontainers/image-spec/blob/main/annotations.md#pre-defined-annotation-keys,
