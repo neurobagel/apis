@@ -1,0 +1,4 @@
+[codespell]
+skip = .git,*.pdf,*.svg,./apps/node-api/vocab/backup_external/
+# 
+# ignore-words-list = 
